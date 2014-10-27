@@ -15,9 +15,40 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DXg-rh-UmG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" id="6V2-s2-XQO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6V2-s2-XQO" id="bUA-Is-X17">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="lHs-kW-Zax"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3jP-di-bVz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DXg-rh-UmG" secondAttribute="trailing" id="9g2-yq-IuD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DXg-rh-UmG" secondAttribute="bottom" id="BoV-ED-xfZ"/>
+                            <constraint firstItem="DXg-rh-UmG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BtL-m9-LIc"/>
+                            <constraint firstItem="DXg-rh-UmG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Lgh-qg-GNM"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tb9-eU-GeX"/>
+                    <navigationItem key="navigationItem" id="Tb9-eU-GeX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MjO-Id-TgZ">
+                            <connections>
+                                <action selector="onAddPersonButtonPressed:" destination="vXZ-lx-hvc" id="Snc-Ob-fvz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

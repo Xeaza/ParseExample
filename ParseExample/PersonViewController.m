@@ -8,20 +8,38 @@
 
 #import "PersonViewController.h"
 
-@interface PersonViewController ()
+@interface PersonViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation PersonViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+#pragma mark - Table View Delegate Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
+    return cell;
+}
+
+- (IBAction)onAddPersonButtonPressed:(id)sender
+{
+
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
