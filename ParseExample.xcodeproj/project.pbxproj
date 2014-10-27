@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		343DB4D219FEA10000D8B506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DB4D119FEA10000D8B506 /* main.m */; };
 		343DB4D519FEA10000D8B506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DB4D419FEA10000D8B506 /* AppDelegate.m */; };
-		343DB4D819FEA10000D8B506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DB4D719FEA10000D8B506 /* ViewController.m */; };
+		343DB4D819FEA10000D8B506 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DB4D719FEA10000D8B506 /* PersonViewController.m */; };
 		343DB4DB19FEA10000D8B506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343DB4D919FEA10000D8B506 /* Main.storyboard */; };
 		343DB4DD19FEA10000D8B506 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343DB4DC19FEA10000D8B506 /* Images.xcassets */; };
 		343DB4E019FEA10000D8B506 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 343DB4DE19FEA10000D8B506 /* LaunchScreen.xib */; };
@@ -25,6 +25,8 @@
 		343DB50819FEA1E900D8B506 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DB4FE19FEA1E900D8B506 /* Security.framework */; };
 		343DB50919FEA1E900D8B506 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DB4FF19FEA1E900D8B506 /* StoreKit.framework */; };
 		343DB50A19FEA1E900D8B506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DB50019FEA1E900D8B506 /* SystemConfiguration.framework */; };
+		343DB50C19FEA4C000D8B506 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DB50B19FEA4C000D8B506 /* Parse.framework */; };
+		343DB50E19FEA4ED00D8B506 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DB50D19FEA4ED00D8B506 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +45,8 @@
 		343DB4D119FEA10000D8B506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		343DB4D319FEA10000D8B506 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		343DB4D419FEA10000D8B506 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		343DB4D619FEA10000D8B506 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		343DB4D719FEA10000D8B506 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		343DB4D619FEA10000D8B506 /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		343DB4D719FEA10000D8B506 /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		343DB4DA19FEA10000D8B506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		343DB4DC19FEA10000D8B506 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		343DB4DF19FEA10000D8B506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		343DB4FE19FEA1E900D8B506 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		343DB4FF19FEA1E900D8B506 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		343DB50019FEA1E900D8B506 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		343DB50B19FEA4C000D8B506 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		343DB50D19FEA4ED00D8B506 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,11 @@
 				343DB50519FEA1E900D8B506 /* libz.dylib in Frameworks */,
 				343DB50619FEA1E900D8B506 /* MobileCoreServices.framework in Frameworks */,
 				343DB50719FEA1E900D8B506 /* QuartzCore.framework in Frameworks */,
+				343DB50E19FEA4ED00D8B506 /* Bolts.framework in Frameworks */,
 				343DB50819FEA1E900D8B506 /* Security.framework in Frameworks */,
 				343DB50919FEA1E900D8B506 /* StoreKit.framework in Frameworks */,
 				343DB50A19FEA1E900D8B506 /* SystemConfiguration.framework in Frameworks */,
+				343DB50C19FEA4C000D8B506 /* Parse.framework in Frameworks */,
 				343DB4F619FEA19B00D8B506 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,8 +122,8 @@
 			children = (
 				343DB4D319FEA10000D8B506 /* AppDelegate.h */,
 				343DB4D419FEA10000D8B506 /* AppDelegate.m */,
-				343DB4D619FEA10000D8B506 /* ViewController.h */,
-				343DB4D719FEA10000D8B506 /* ViewController.m */,
+				343DB4D619FEA10000D8B506 /* PersonViewController.h */,
+				343DB4D719FEA10000D8B506 /* PersonViewController.m */,
 				343DB4D919FEA10000D8B506 /* Main.storyboard */,
 				343DB4DC19FEA10000D8B506 /* Images.xcassets */,
 				343DB4DE19FEA10000D8B506 /* LaunchScreen.xib */,
@@ -129,6 +135,8 @@
 		343DB4CF19FEA10000D8B506 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				343DB50D19FEA4ED00D8B506 /* Bolts.framework */,
+				343DB50B19FEA4C000D8B506 /* Parse.framework */,
 				343DB4F719FEA1E900D8B506 /* AudioToolbox.framework */,
 				343DB4F819FEA1E900D8B506 /* CFNetwork.framework */,
 				343DB4F919FEA1E900D8B506 /* CoreGraphics.framework */,
@@ -263,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				343DB4D819FEA10000D8B506 /* ViewController.m in Sources */,
+				343DB4D819FEA10000D8B506 /* PersonViewController.m in Sources */,
 				343DB4D519FEA10000D8B506 /* AppDelegate.m in Sources */,
 				343DB4D219FEA10000D8B506 /* main.m in Sources */,
 			);

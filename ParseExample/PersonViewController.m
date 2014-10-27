@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Taylor Wright-Sanson. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PersonViewController.h"
 
-@interface ViewController ()
+@interface PersonViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PersonViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
