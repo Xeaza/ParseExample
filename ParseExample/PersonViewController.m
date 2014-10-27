@@ -11,6 +11,9 @@
 
 @interface PersonViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property NSArray *people;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation PersonViewController
@@ -18,18 +21,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self refreshDisplay];
 }
 
 #pragma mark - Table View Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return self.people.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
+    // self.people is filled with PFObjects
+    cell.textLabel.text = [self.people objectAtIndex:indexPath.row][@"name"];
     return cell;
 }
 
@@ -52,7 +58,17 @@
 
 - (void)refreshDisplay
 {
-
+    PFQuery *query = [PFQuery queryWithClassName:@"Person"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error.userInfo);
+            self.people = [NSArray array];
+        }
+        else {
+            self.people = objects;
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
