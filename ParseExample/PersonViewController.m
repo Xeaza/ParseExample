@@ -7,6 +7,7 @@
 //
 
 #import "PersonViewController.h"
+#import <Parse/Parse.h>
 
 @interface PersonViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,6 +34,23 @@
 }
 
 - (IBAction)onAddPersonButtonPressed:(id)sender
+{
+    PFObject *person = [PFObject objectWithClassName:@"Person"];
+    person[@"name"] = @"Johnny Appleseed";
+    // Make sure to store int as an NSNumber object.
+    person[@"age"] = @22;
+
+    [person saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error.userInfo);
+        }
+        else {
+            [self refreshDisplay];
+        }
+    }];
+}
+
+- (void)refreshDisplay
 {
 
 }
