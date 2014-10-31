@@ -59,7 +59,8 @@
 - (void)refreshDisplay
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Person"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+    {
         if (error) {
             NSLog(@"Error: %@", error.userInfo);
             self.people = [NSArray array];
